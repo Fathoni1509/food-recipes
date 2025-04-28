@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Recipes</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,-50..200&icon_names=star" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section class="welcome">
+      <div class="title">
+        <h1>WHAT DO YOU WANT TO COOK TODAY?</h1>
+        <div class="btn-container">
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes" type="button" id="all">All</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/meal-type/breakfast" type="button" id="breakfast">Breakfast</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/meal-type/lunch" type="button" id="lunch">Lunch</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/meal-type/dinner" type="button" id="dinner">Dinner</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/italian" type="button" id="italian">Italian</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/mexican" type="button" id="mexican">Mexican</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/mediterranean" type="button" id="mediterranean">Mediterranean</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/asian" type="button" id="asian">Asian</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/pakistani" type="button" id="pakistani">Pakistani</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/japanese" type="button" id="japanese">Japanese</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/moroccan" type="button" id="moroccan">Moroccan</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/greek" type="button" id="greek">Greek</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/thai" type="button" id="thai">Thai</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/indian" type="button" id="indian">Indian</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/turkish" type="button" id="turkish">Turkish</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/russian" type="button" id="russian">Russian</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/lebanese" type="button" id="lebanese">Lebanese</button>
+          <button class="recipe-btn" data-url="https://dummyjson.com/recipes/tag/brazilian" type="button" id="brazilian">Brazilian</button>
+        </div>
+      </div>
+      <!-- wadah untuk menampilkan list resep -->
+      <div class="container">
+        <div class="arrow prev">
+          <span class="material-icons">chevron_left</span>
+        </div>
+        <div id="contain-recipes" class="contain-recipes">
+          <div class="carousel"></div>
+        </div>
+        <div class="arrow next">
+          <span class="material-icons">chevron_right</span>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+      <!-- wadah untuk detail tiap masakan -->
+      <div class="detail-modal hidden"></div>
+      <div class="auth">
+        <h5>Fathoni Nur Habibi / dummyjson.com</h5>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

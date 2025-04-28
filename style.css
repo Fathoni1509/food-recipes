@@ -1,0 +1,239 @@
+html {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-image: url("asset/img/bg-food.png");
+    background-size: cover;
+    padding: 8px;
+}
+
+/* section welcome */
+.welcome {
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.welcome h1 {
+    text-align: center;
+    margin: 24px;
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #7e2d00;
+    font-weight: 800;
+}
+
+/* wadah tombol resep */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 6px;
+    margin: 2rem 0 1rem 0;
+}
+
+/* tombol resep */
+.recipe-btn {
+    all: unset;
+    cursor: pointer;
+    color: rgb(248, 243, 241);
+    background-color: rgb(0, 87, 13);
+    width: 7.8rem;
+    height: 2rem;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.recipe-btn:hover {
+    background-color: rgb(234, 136, 16);
+    transition: 0.4s;
+}
+
+/* wadah menampilkan resep + navigasi */
+.container {
+    padding: 0 4px;
+    display: flex;
+    gap: 4px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* panah navigasi kanan kiri */
+.arrow {
+    cursor: pointer;
+    background-color: #7e2d00;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* navigasi nonaktif */
+.arrow.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }  
+
+/* wadah resep */
+.contain-recipes {
+    overflow: hidden;
+    width: 1100px;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+
+/* wadah carousel card resep */
+.carousel {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.8s ease;
+}
+
+/* kartu tiap resep */
+.card {
+    background-color: #7e2d00;
+    color: rgb(248, 243, 241);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    transform: translate(0px, 0px);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color:rgb(215, 137, 65);
+    transform: translate(8px, -4px);
+    box-shadow: -8px 4px 5px rgba(138, 137, 137, 0.85)
+}
+
+.card img {
+    width: 240px;
+    border-radius: 0.5rem;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 240px;
+    margin: 12px 0;
+}
+
+/* rating + difficult */
+.card .level {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 1rem;
+    width: 90%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.card .rate {
+    display: flex;
+    gap: 4px;
+    justify-content: end;
+    align-items: center;
+}
+
+.level p {
+    text-align: left;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* modal detail resep tiap masakan */
+.detail-modal {
+    background-color:rgb(143, 79, 44);
+    width: 900px;
+    height: 400px;
+    padding: 16px;
+    border-radius: 24px;
+    position: fixed;
+    z-index: 5;
+    border: solid white 1px;
+}
+
+/* wadah detail resep tiap masakan */
+.detail-recipe {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.detail-recipe img {
+    width: 350px;
+    border-radius: 8px;
+}
+
+/* judul masakan */
+.desc .title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid white; 
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+/* bahan baku + instruksi */
+.desc .ing-inst {
+    font-size: 16px;
+    max-height: 330px;
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    line-height: 1.5rem;
+}
+
+.ing-inst h4 {
+    margin: 10px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+/* layer overlay hitam */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 4;
+  }
+
+.auth h5 {
+    margin: 0;
+}
